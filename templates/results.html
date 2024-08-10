@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">Stock Market Prediction and Analysis Tool</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Stock Prediction Results</h1>
+
+        <h3 class="mt-3">Historical Predictions</h3>
+        <img src="{{ url_for('static', filename='images/plot.png') }}" alt="Stock Prediction Plot" class="img-fluid mt-3">
+
+        <h3 class="mt-5">Future Predictions</h3>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Predicted Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prediction in future_predictions %}
+                <tr>
+                    <td>{{ prediction['Days'] }}</td>
+                    <td>{{ prediction['Predicted Price'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

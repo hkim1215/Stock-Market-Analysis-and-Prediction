@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Prediction and Analysis Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            font-size: 18px; /* Increase base font size */
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 36px; /* Increase header font size */
+        }
+
+        .tabs-section {
+            background-color: #e8f5e9;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Center align items vertically */
+        }
+
+        .tab {
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .tab:hover {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .clock {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: auto; /* Push clock to the right */
+            align-self: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        h1 {
+            font-size: 48px; /* Increase h1 font size */
+        }
+
+        h2 {
+            font-size: 32px; /* Increase h2 font size */
+        }
+
+        p {
+            font-size: 20px; /* Increase paragraph font size */
+            line-height: 1.6;
+        }
+
+        .about, .project, .technologies, .mission {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            border-left: 5px solid #4caf50;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            font-size: 32px; /* Increase section title font size */
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tech-item {
+            flex: 1 1 300px;
+            padding: 20px; /* Increase padding */
+            margin: 20px; /* Increase margin */
+            background-color: #e8f5e9;
+            border-radius: 5px;
+        }
+
+        .tech-item h3 {
+            font-size: 24px; /* Increase tech item heading font size */
+            margin-bottom: 10px; /* Add margin below heading */
+        }
+
+        .tech-item ul {
+            font-size: 20px; /* Increase tech item list font size */
+        }
+
+        .tech-item li {
+            margin-bottom: 10px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="datetime-local"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to our Stock Market Prediction and Analysis Tool</h1>
+    </header>
+    <div class="tabs-section">
+        <a href="#" class="tab" data-tab="home">Home</a>
+        <a href="#" class="tab" data-tab="tool">Tool</a>
+        <div id="current-time" class="clock"></div>
+    </div>
+    <div class="container">
+        <div id="home" class="tab-content active">
+            <section class="about">
+                <h2 class="section-title">About Us</h2>
+                <p>Our names are Haram Kim and Aya Hesham. We are two Junior Computer Science students studying at George Mason University. We had thought about creating a Stock Market Analysis tool where we created an algorithm that combines cutting-edge, innovative technology with financial foresight. We are a team that is passionate about utilizing the power of artificial intelligence to predict stock market trends. Our journey had begun with a spark of curiosity about how the intersection of artificial intelligence and finance can be used to benefit the financial aspect of people's lives. Today we are excited to present our culmination: a predictive tool designed to empower investors with actionable insights.</p>
+            </section>
+            <section class="project">
+                <h2 class="section-title">Our Project</h2>
+                <p>We utilized advanced machine learning techniques, specifically the LSTM (Long Short-Term Memory) algorithm, to predict stock market movements. This powerful algorithm excels at capturing intricate patterns in historical data, enabling us to make informed predictions about future market behavior.</p>
+            </section>
+            <section class="technologies">
+                <h2 class="section-title">Technologies We Used</h2>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <h3>Machine Learning Models and Algorithms</h3>
+                        <ul>
+                            <li>Supervised Learning: Regression models (e.g., Linear Regression, Random Forest, Gradient Boosting) to predict stock prices based on historical data.</li>
+                            <li>Deep Learning: Recurrent Neural Networks (RNNs), specifically LSTM (Long Short-Term Memory) networks, which are effective for sequence prediction tasks like time-series forecasting.</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Data preprocessing</h3>
+                        <ul>
+                            <li>Pandas: Python library for data manipulation and analysis, used for cleaning and transforming raw data.</li>
+                            <li>NumPy: Fundamental package for numerical computing in Python, essential for handling arrays and matrices.</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Web Development</h3>
+                        <ul>
+                            <li>Flask and HTML for creating a user-friendly web interface.</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Cloud Development</h3>
+                        <ul>
+                            <li>AWS (Amazon Web Services) for robust and scalable web deployment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="mission">
+                <h2 class="section-title">Our Mission</h2>
+                <p>Our mission is to ensure that sophisticated financial analysis tools are easily accessible. By providing reliable predictions based on data-driven insights, we aim to assist both seasoned investors and newcomers in making informed decisions in the stock market. Whether you’re a financial enthusiast, investor, or simply curious about the power of AI in finance, please join us by exploring our intuitive web application and experience the future of stock market prediction.</p>
+            </section>
+        </div>
+        <div id="tool" class="tab-content">
+            <h2>Enter Your Ticker Symbol</h2>
+            <form action="/predict" method="post">
+                <div class="form-group">
+                    <label for="ticker">Ticker Symbol:</label>
+                    <input type="text" id="ticker" name="ticker" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                const tabContent = document.getElementById(this.getAttribute('data-tab'));
+                if (tabContent) {
+                    tabContent.classList.add('active');
+                }
+            });
+        });
+
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const year = now.getFullYear();
+            const timeString = `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
+            document.getElementById('current-time').textContent = timeString;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call to display clock immediately
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+# Ignore the virtual environment directory
+venv/
+
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore OS-generated files (macOS)
+.DS_Store
+
+# Ignore the virtual environment directory
+venv/
+
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore OS-generated files (macOS)
+.DS_Store
+
+# Ignore the virtual environment directory
+venv/
+
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore OS-generated files (macOS)
+.DS_Store
+
+# Ignore OS-generated files (Windows)
+Thumbs.db
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore IDE configuration directories
+.vscode/
+.idea/
